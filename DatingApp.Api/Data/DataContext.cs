@@ -8,12 +8,18 @@ namespace DatingApp.Api.Data
         public DataContext(DbContextOptions<DataContext> options) : base (options){}
 
         public DbSet<Value> Values { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Value>()
             .Property(p => p.Id)
             .ValueGeneratedOnAdd();
+
+        modelBuilder.Entity<User>()
+            .Property(p => p.Id)
+            .ValueGeneratedOnAdd();
     } 
-    }
+
+    } 
 }
