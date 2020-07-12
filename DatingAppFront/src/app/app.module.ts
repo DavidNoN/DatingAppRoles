@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ErrorInterceptorProvider } from './services/errors.service';
 
 
 @NgModule({
@@ -23,7 +24,9 @@ import { RegisterComponent } from './components/register/register.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    ErrorInterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
