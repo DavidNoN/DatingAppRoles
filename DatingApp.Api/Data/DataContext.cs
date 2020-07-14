@@ -9,6 +9,7 @@ namespace DatingApp.Api.Data
 
         public DbSet<Value> Values { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Photo> Photos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -19,6 +20,11 @@ namespace DatingApp.Api.Data
         modelBuilder.Entity<User>()
             .Property(p => p.Id)
             .ValueGeneratedOnAdd();
+        
+        modelBuilder.Entity<Photo>()
+            .Property(p => p.Id)
+            .ValueGeneratedOnAdd();
+            
     } 
 
     } 
