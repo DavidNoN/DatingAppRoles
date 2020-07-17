@@ -30,6 +30,7 @@ import { MemberEditComponent } from './components/member/member-edit/member-edit
 import { PhotoEditComponent } from './components/member/photo-edit/photo-edit.component';
 import { FileUploadModule } from 'ng2-file-upload';
 import { TimeagoModule } from 'ngx-timeago';
+import { ListsResolver } from './resolvers/lists.resolver';
 
 
 export function tokenGetter(): string {
@@ -77,7 +78,8 @@ export function tokenGetter(): string {
     ErrorInterceptorProvider,
     MemberDetailResolver,
     MemberListResolver,
-    MemberEditResolver
+    MemberEditResolver,
+    ListsResolver
   ],
   bootstrap: [AppComponent]
 })
