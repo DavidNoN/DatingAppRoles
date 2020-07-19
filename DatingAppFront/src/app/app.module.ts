@@ -31,6 +31,8 @@ import { PhotoEditComponent } from './components/member/photo-edit/photo-edit.co
 import { FileUploadModule } from 'ng2-file-upload';
 import { TimeagoModule } from 'ngx-timeago';
 import { ListsResolver } from './resolvers/lists.resolver';
+import { MessagesResolver } from './resolvers/messages.resolver';
+import { MemberMessagesComponent } from './components/member/member-messages/member-messages.component';
 
 
 export function tokenGetter(): string {
@@ -49,7 +51,8 @@ export function tokenGetter(): string {
     MemberCardComponent,
     MemberDetailComponent,
     MemberEditComponent,
-    PhotoEditComponent
+    PhotoEditComponent,
+    MemberMessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -79,7 +82,8 @@ export function tokenGetter(): string {
     MemberDetailResolver,
     MemberListResolver,
     MemberEditResolver,
-    ListsResolver
+    ListsResolver,
+    MessagesResolver
   ],
   bootstrap: [AppComponent]
 })
