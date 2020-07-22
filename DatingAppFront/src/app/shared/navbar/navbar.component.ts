@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.currentPhotoUrl.subscribe(photourl => this.photoUrl = photourl);
+    console.log(this.photoUrl);
   }
 
   login(): void{
